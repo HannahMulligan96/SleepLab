@@ -58,7 +58,6 @@
         android:layout_height="70dp"
         android:layout_marginTop="68dp"
         android:layout_marginBottom="42dp"
-
         android:background="@drawable/registerbutton"
         android:text="Login"
         app:layout_constraintBottom_toTopOf="@+id/textViewLogIn"

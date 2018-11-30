@@ -1,31 +1,349 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ProfileActivity">
+    android:orientation="vertical"
+    android:weightSum="10"
+    tools:context=".MainActivity">
 
-    <LinearLayout
-        android:layout_width="368dp"
-        android:layout_height="495dp"
-        android:orientation="vertical"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="0dp">
+    <RelativeLayout
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
 
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="Sleep Lab"
+        android:textColor="#594A42"
+        android:textSize="36sp" ></TextView>
         <TextView
             android:id="@+id/textViewUserEmail"
+            android:fontFamily="sans-serif-smallcaps"
+            android:textColor="#594A42"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:text="TextView"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
+            android:text="TextView" />
+    </RelativeLayout>
+
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8"
+        android:alignmentMode="alignMargins"
+        android:columnCount="2"
+        android:columnOrderPreserved="false"
+        android:padding="14dp"
+        android:rowCount="3">
+
+        <!--row one-->
+
+        <!--column one-->
+        <android.support.v7.widget.CardView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_marginLeft="14dp"
+            android:layout_marginRight="14dp"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="8dp">
+
+            <FrameLayout
+            android:background="#9FB543"
+            android:layout_width="3dp"
+            android:layout_height="match_parent"/>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_margin="16dp">
+
+                <ImageView
+                    android:layout_width="66dp"
+                    android:layout_height="67dp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/body" />
+
+                <ImageView
+                    android:layout_width="66dp"
+                    android:layout_height="67dp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/temp2" />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textViewBodyTemp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Body Temp"
+                android:textColor="#594A42"
+                android:textSize="20sp" />
+
+        </android.support.v7.widget.CardView>
+
+        <!--column two-->
+
+        <android.support.v7.widget.CardView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="8dp">
+
+            <FrameLayout
+                android:background="#9FB543"
+                android:layout_width="3dp"
+                android:layout_height="match_parent"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_margin="16dp">
+
+                <ImageView
+                    android:layout_width="66dp"
+                    android:layout_height="67dp"
+                    android:layout_gravity="center_horizontal"
+                    android:contentDescription="TODO"
+                    android:src="@drawable/light" />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textViewLight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Light"
+                android:textColor="#594A42"
+                android:textSize="20sp" />
+        </android.support.v7.widget.CardView>
+
+        <!--column three-->
+        <android.support.v7.widget.CardView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="8dp">
+
+            <FrameLayout
+                android:background="#9FB543"
+                android:layout_width="3dp"
+                android:layout_height="match_parent"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_margin="16dp">
+
+                <ImageView
+                    android:layout_width="66dp"
+                    android:layout_height="67dp"
+                    android:layout_gravity="center_horizontal"
+                    android:contentDescription="TODO"
+                    android:src="@drawable/hum" />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textViewHum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Humidity"
+                android:textColor="#594A42"
+                android:textSize="20sp" />
+        </android.support.v7.widget.CardView>
+
+        <!--column four-->
+        <android.support.v7.widget.CardView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="8dp">
+
+            <FrameLayout
+                android:background="#9FB543"
+                android:layout_width="3dp"
+                android:layout_height="match_parent"/>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_margin="16dp">
+
+                <ImageView
+                    android:layout_width="66dp"
+                    android:layout_height="67dp"
+                    android:layout_gravity="center_horizontal"
+                    android:contentDescription="TODO"
+                    android:src="@drawable/motion" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textViewMotion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Motion"
+                android:textColor="#594A42"
+                android:textSize="20sp" />
+
+        </android.support.v7.widget.CardView>
+
+        <!--column five-->
+        <android.support.v7.widget.CardView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="8dp">
+
+            <FrameLayout
+                android:background="#9FB543"
+                android:layout_width="3dp"
+                android:layout_height="match_parent"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_margin="16dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:contentDescription="TODO"
+                    android:src="@drawable/temp2" />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textViewTemp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Temperature"
+                android:textColor="#594A42"
+                android:textSize="20sp" />
+
+        </android.support.v7.widget.CardView>
+
+        <!--column six-->
+        <android.support.v7.widget.CardView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="8dp">
+
+            <FrameLayout
+                android:background="#9FB543"
+                android:layout_width="3dp"
+                android:layout_height="match_parent"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_margin="16dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:contentDescription="TODO"
+                    android:src="@drawable/sound" />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/textViewSound"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Sound"
+                android:textColor="#594A42"
+                android:textSize="20sp" />
+        </android.support.v7.widget.CardView>
+    </GridLayout>
+
+
+
+    <android.support.v7.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    </android.support.v7.widget.CardView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
 
         <Button
             android:id="@+id/buttonLogout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/registerbutton"
             android:layout_gravity="center_horizontal"
             android:text="Logout" />
-    </LinearLayout>
-</android.support.constraint.ConstraintLayout>
+
+
+
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>
